@@ -1,0 +1,1 @@
+conan upload --all --remote bincrafters Boost.Atomic/1.64.0@bincrafters/testing

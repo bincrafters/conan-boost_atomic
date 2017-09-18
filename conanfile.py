@@ -13,10 +13,10 @@ class BoostAtomicConan(ConanFile):
     lib_short_names = ["atomic"]
     default_options = "shared=False"
     options = {"shared": [True, False]}
-    build_requires = "Boost.Generator/1.64.0@bincrafters/testing" 
-    requires = "Boost.Config/1.64.0@bincrafters/testing", \
-        "Boost.Assert/1.64.0@bincrafters/testing", \
-        "Boost.Type_Traits/1.64.0@bincrafters/testing"
+    build_requires = "Boost.Generator/1.65.1@bincrafters/testing" 
+    requires = "Boost.Config/1.65.1@bincrafters/testing", \
+        "Boost.Assert/1.65.1@bincrafters/testing", \
+        "Boost.Type_Traits/1.65.1@bincrafters/testing"
  
     def source(self):
         boostorg_github = "https://github.com/boostorg"

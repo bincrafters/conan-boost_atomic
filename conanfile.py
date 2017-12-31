@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostAtomicConan(ConanFile):
     name = "boost_atomic"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-atomic"
+    url = "https://github.com/bincrafters/conan-boost_atomic"
 
     lib_short_names = ["atomic"]
     is_header_only = False

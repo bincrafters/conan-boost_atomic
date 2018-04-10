@@ -6,8 +6,7 @@ from conans import ConanFile, tools
 
 class BoostAtomicConan(ConanFile):
     name = "boost_atomic"
-    version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost_atomic"
+    version = "1.67.0"
     author = "Bincrafters <bincrafters@gmail.com>"
     exports = ["LICENSE.md"]
     lib_short_names = ["atomic"]
@@ -17,10 +16,10 @@ class BoostAtomicConan(ConanFile):
     default_options = "shared=False"
 
     requires = (
-        "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_config/1.66.0@bincrafters/testing",
-        "boost_assert/1.66.0@bincrafters/testing",
-        "boost_type_traits/1.66.0@bincrafters/testing"
+        "boost_assert/1.67.0@bincrafters/testing",
+        "boost_config/1.67.0@bincrafters/testing",
+        "boost_package_tools/1.67.0@bincrafters/testing",
+        "boost_type_traits/1.67.0@bincrafters/testing"
     )
 
     def package_id_additional(self):
@@ -31,12 +30,13 @@ class BoostAtomicConan(ConanFile):
 
     # BEGIN
 
-    description = "Please visit http://www.boost.org/doc/libs/1_66_0"
+    url = "https://github.com/bincrafters/conan-boost_atomic"
+    description = "Please visit http://www.boost.org/doc/libs/1_67_0"
     license = "BSL-1.0"
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    build_requires = "boost_generator/1.66.0@bincrafters/testing"
+    build_requires = "boost_generator/1.67.0@bincrafters/testing"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
@@ -64,7 +64,5 @@ class BoostAtomicConan(ConanFile):
             import boost_package_tools  # pylint: disable=F0401
             boost_package_tools.package_info(self)
         getattr(self, "package_info_additional", lambda:None)()
-
-
 
     # END

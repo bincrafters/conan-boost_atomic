@@ -10,7 +10,6 @@ class BoostAtomicConan(base.BoostBaseConan):
     name = "boost_atomic"
     url = "https://github.com/bincrafters/conan-boost_atomic"
     lib_short_names = ["atomic"]
-    header_only_libs = ["atomic"]
     options = {"shared": [True, False]}
     default_options = "shared=False"    
     b2_requires = [

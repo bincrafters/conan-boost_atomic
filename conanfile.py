@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.67.0@bincrafters/testing")
 
 class BoostAtomicConan(base.BoostBaseConan):
     name = "boost_atomic"
+    version = "1.67.0"
     url = "https://github.com/bincrafters/conan-boost_atomic"
     lib_short_names = ["atomic"]
     options = {"shared": [True, False]}
